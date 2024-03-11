@@ -1,0 +1,80 @@
+version: "3"
+services:
+  db:
+    image: postgis/postgis
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=gestionpostadministrador
+      - POSTGRES_PASSWORD=2a12poC7a9JyAT7BaFFo6yRPsO6QAOgrIFbYMZ89PClFNXzFhfVrmtNy
+  redis:
+    image: redis:6.2.4
+    ports:
+      - "6379:6379"
+    expose:
+      - 6379
+  server:
+    build: .
+    command: yarn run dev
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    expose:
+      - "9229"
+    environment:
+      - PORT=3000
+      - DB_USERNAME=gestionpostadministrador
+      - DB_PASSWORD=2a12poC7a9JyAT7BaFFo6yRPsO6QAOgrIFbYMZ89PClFNXzFhfVrmtNy
+      - DB_NAME=gestionpost
+      - DB_HOST=db
+      - NODE_ENV=development
+      - MELI_PORT=443
+      - MELI_TOKEN_EXPIRATION_MONTHS=6
+      - MELI_HOSTNAME=api.mercadolibre.com
+      - MELI_REDIRECT_URL=http://localhost:3000/api/meli
+      - MELI_ENCRYPT_SECRET_KEY=b457ef56e35abd6b053fccffd609287fea8b1ad51860c4c9de4995728c8e2999
+      - G_MAP_API_KEY=AIzaSyDtNh4TzRf3eN5la86hz9gBfEZN-VeyCCw
+      - REDIS_URL=redis://redis:6379
+      - S3_ID=AKIA3RV7METYFGUF2LNJ
+      - S3_SECRET=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
+      - S3_BUCKET_NAME=gestionpost
+      - AUTH0_AUDIENCE=xvd6Z8XnxWz56MeabsKB3SYk8ae1NP7S
+      - AUTH0_ALGORITHM=RS256
+      - AUTH0_ISSUER=https://dev-up1uee50uvfhy83s.us.auth0.com/
+      - AUTH0_CLIENT_ID=xvd6Z8XnxWz56MeabsKB3SYk8ae1NP7S
+      - AUTH0_CLIENT_SECRET=BXtXFRlISU9sKBSXtcZtBuM6p-8cWOTsGGNkHQ2pBWCadON0CXWHZlwAdV9Ja4Yi
+      - GESTION_CEL=097232342
+      - GESTION_TEL=24030535
+      - GESTION_DIR=Defensa 1917 bis
+      - GESTION_WEB=www.gestionpost.com.uy
+      - REQUEST_LIMIT=60
+      - MELI_LIMITED_FLEX=true
+      - AGENCY_POSTAL_CODE=11800
+      - MAX_SUGGEST_LOCATIONS=5
+      - SUGGEST_LOCATIONS_LAT=-34.862010
+      - SUGGEST_LOCATIONS_LNG=-56.152944
+      - SUGGEST_LOCATIONS_RADIUS=25000
+      - AWS_QUEUE_URL=https://sqs.us-east-2.amazonaws.com/793896559856/Meli_notification_queue
+    stdin_open: true
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+      - ./node_modules:/usr/src/app/node_modules
+    tty: true
+  ngrok:
+    image: shkoliar/ngrok:latest
+    ports:
+      - "4551:4551"
+    links:
+      - server
+    environment:
+      - DOMAIN=server
+      - PORT=3000
+      - DEBUG=true
+
+volumes:
+  node_modules: {}

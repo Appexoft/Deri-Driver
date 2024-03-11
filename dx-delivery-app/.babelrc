@@ -1,0 +1,23 @@
+{
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ],
+        "alias": {
+            "@components": "./src/components",
+            "@screens": "./src/screens",
+            "@store": "./src/store",
+            "@assets": "./assets",
+            "@hooks": "./src/hooks",
+            "@helpers": "./src/helpers",
+            "@api": "./src/api",
+            "@utils": "./src/utils",
+            "@theme": "./src/theme"
+         }
+        } 
+      ] 
+    ]
+}

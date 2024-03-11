@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="WBR-B2-p8T">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="b6B-gt-wts">
+                                <rect key="frame" x="172.66666666666666" y="417" width="83" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="jV4-on-7V5"/>
+                                    <constraint firstAttribute="width" constant="83" id="kd8-YQ-cOC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainText" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-mn-QxZ">
+                                <rect key="frame" x="123.66666666666669" y="525" width="181" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="LoV-dp-03R"/>
+                                    <constraint firstAttribute="height" constant="36" id="deI-XT-5Ow"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WBR-B2-p8T" secondAttribute="bottom" id="9gJ-oV-Zfq"/>
+                            <constraint firstItem="HTE-mn-QxZ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="80" id="BFq-t0-0Ci"/>
+                            <constraint firstItem="b6B-gt-wts" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-10" id="IC1-jV-6jc"/>
+                            <constraint firstItem="WBR-B2-p8T" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ODR-EX-akH"/>
+                            <constraint firstItem="WBR-B2-p8T" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="Prq-Cg-fiH"/>
+                            <constraint firstItem="HTE-mn-QxZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QOa-iC-E5K"/>
+                            <constraint firstItem="WBR-B2-p8T" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cvI-Is-jjM"/>
+                            <constraint firstItem="b6B-gt-wts" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nLm-0j-ULh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.065420560747661" y="373.21814254859612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MainText" width="179.33332824707031" height="23.666666030883789"/>
+        <image name="Splash" width="142.66667175292969" height="282.66665649414062"/>
+        <image name="SplashIcon" width="73" height="83.333335876464844"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

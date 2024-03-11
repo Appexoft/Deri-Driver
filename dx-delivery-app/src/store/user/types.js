@@ -1,0 +1,13 @@
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+export const SET_MELI_AUTH_URL = 'SET_MELI_AUTH_URL';
+export const ERROR = 'ERROR';
+export const LOADING = 'LOADING';
+export const START_SIGN_UP = 'START_SIGN_UP';
+export const SIGNUP_ERROR_MESSAGE = 'SIGNUP_ERROR_MESSAGE';
+export const SET_ADDRESS_GEOCODE = 'SET_ADDRESS_GEOCODE';
+export const SET_ADDRESS_FLOOR = 'SET_ADDRESS_FLOOR';
+export const SET_SUGGESTED_LOCATIONS = 'SET_SUGGESTED_LOCATIONS';
+export const MAP_LOADING = 'MAP_LOADING';
+export const MAP_ERROR = 'MAP_ERROR';
+export const UPDATE_BUSINESS_ERROR = 'UPDATE_BUSINESS_ERROR';
