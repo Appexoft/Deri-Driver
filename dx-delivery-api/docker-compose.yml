@@ -38,7 +38,7 @@ services:
       - MELI_ENCRYPT_SECRET_KEY=b457ef56e35abd6b053fccffd609287fea8b1ad51860c4c9de4995728c8e2999
       - G_MAP_API_KEY=AIzaSyDtNh4TzRf3eN5la86hz9gBfEZN-VeyCCw
       - REDIS_URL=redis://redis:6379
-      - S3_ID=AKIA3RV7METYFGUF2LNJ
+      # - S3_ID=AKIA3RV7METYFGUF2LNJ
       - S3_SECRET=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
       - S3_BUCKET_NAME=gestionpost
       - AUTH0_AUDIENCE=xvd6Z8XnxWz56MeabsKB3SYk8ae1NP7S
